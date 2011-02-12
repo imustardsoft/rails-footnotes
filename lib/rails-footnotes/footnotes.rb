@@ -272,8 +272,7 @@ module Footnotes
         order = []
         each_with_rescue(@notes) do |note|
           order << note.row
-	  # remove the controller note functionality as it is not compatible with rails	
-          #links[note.row] += [link_helper(note)]
+          links[note.row] += [link_helper(note)]
         end
 
         html = ''
