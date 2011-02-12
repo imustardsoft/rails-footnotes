@@ -43,7 +43,7 @@ module Footnotes
 
         def controller_text
           if controller_filename
-            @controller_text ||= IO.read(controller_filename)
+            @controller_text ||= (IO.read(controller_filename) rescue 'not existent or borrowed')
           end
         end
 
