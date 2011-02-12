@@ -12,7 +12,6 @@ module Footnotes
       end
 
       def link
-	return; # remove the read controller functionality
         if controller_filename && controller_line_number
           escape(Footnotes::Filter.prefix(controller_filename, controller_line_number + 1, 3))
         end
